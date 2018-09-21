@@ -24,6 +24,9 @@
 #include <stddef.h>
 #include <stdio.h>
 
+// Prevent duplicate definition for newer versions of libjpeg-turbo.
+#undef HAVE_STDDEF_H
+#undef HAVE_STDLIB_H
 #include <jpeglib.h>
 
 #include <string>

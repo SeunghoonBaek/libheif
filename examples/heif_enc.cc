@@ -35,6 +35,9 @@
 
 #if HAVE_LIBJPEG
 extern "C" {
+// Prevent duplicate definition for newer versions of libjpeg-turbo.
+#undef HAVE_STDDEF_H
+#undef HAVE_STDLIB_H
 #include <jpeglib.h>
 }
 #endif
