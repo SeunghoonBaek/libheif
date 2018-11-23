@@ -103,12 +103,14 @@ void HeifFile::new_empty_file()
   m_iinf_box = std::make_shared<Box_iinf>();
   m_iprp_box = std::make_shared<Box_iprp>();
   m_pitm_box = std::make_shared<Box_pitm>();
+  m_colr_box = std::make_shared<Box_colr>();
 
   m_meta_box->append_child_box(m_hdlr_box);
   m_meta_box->append_child_box(m_pitm_box);
   m_meta_box->append_child_box(m_iloc_box);
   m_meta_box->append_child_box(m_iinf_box);
   m_meta_box->append_child_box(m_iprp_box);
+  m_meta_box->append_child_box(m_colr_box);
 
   m_iprp_box->append_child_box(m_ipco_box);
   m_iprp_box->append_child_box(m_ipma_box);
